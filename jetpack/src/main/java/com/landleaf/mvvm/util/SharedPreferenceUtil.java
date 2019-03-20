@@ -17,10 +17,10 @@ public class SharedPreferenceUtil {
         return ViewHolder.instance;
     }
 
-    public void cacheWeatherInfo(Context context, Weather weather){
+    public void cacheWeatherInfo(Context context, String weather){
         if (weather!=null){
             SharedPreferences sp = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
-            sp.edit().putString("weather",weather.toString()).apply();
+            sp.edit().putString("weather",weather).apply();
         }
     }
 

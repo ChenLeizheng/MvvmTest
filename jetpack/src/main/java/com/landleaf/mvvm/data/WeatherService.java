@@ -15,7 +15,7 @@ import retrofit2.http.Query;
 public interface WeatherService {
 
     @GET("api/weather")
-    public Call<HeWeather> getWeather(@Query("cityId")String weatherId, @Query("key")String key);
+    public Call<HeWeather> getWeather(@Query("cityid")String weatherId, @Query("key")String key);
 
     @GET("api/bing_pic")
     public Call<String> getBingPic();
