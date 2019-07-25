@@ -15,5 +15,8 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
+        String s = "10";
+        boolean matches = s.matches("\\d+");
+        System.out.println(matches);
     }
 }

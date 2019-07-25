@@ -2,10 +2,14 @@ package com.landleaf.mvvm.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
 import com.landleaf.mvvm.bean.Weather;
+
+import java.lang.reflect.Field;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class SharedPreferenceUtil {
 
@@ -38,4 +42,33 @@ public class SharedPreferenceUtil {
         static SharedPreferenceUtil instance = new SharedPreferenceUtil();
     }
 
+
+    static boolean init = false;
+    static String CLASS_QUEUED_WORK = "android.app.QueuedWork";
+    static String FIELD_PENDING_FINISHERS = "sPendingWorkFinishers";
+    static ConcurrentLinkedQueue<Runnable> sPendingWorkFinishers = null;
+
+    public static void beforeSPBlock(String tag){
+        if (!init){
+            getPendingWorkFinishers();
+            init = true;
+        }
+        if (sPendingWorkFinishers != null){
+            sPendingWorkFinishers.clear();
+        }
+    }
+
+    static void getPendingWorkFinishers(){
+        try {
+            Class<?> aClass = Class.forName(CLASS_QUEUED_WORK);
+            //获取特定的成员变量
+            Field field = aClass.getDeclaredField(FIELD_PENDING_FINISHERS);
+            if (field!=null){
+                field.setAccessible(true);
+                sPendingWorkFinishers  = (ConcurrentLinkedQueue<Runnable>) field.get(null);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

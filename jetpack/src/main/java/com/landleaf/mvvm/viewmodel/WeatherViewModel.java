@@ -38,6 +38,9 @@ public class WeatherViewModel extends ViewModel {
         return liveData;
     }
 
+
+
+
     public void saveWeatherInfo(Context context,Weather weather){
         Gson gson = new Gson();
         String json = gson.toJson(weather);
