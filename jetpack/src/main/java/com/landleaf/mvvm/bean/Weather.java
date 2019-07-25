@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Weather {
-
+private boolean a;
     public String status;
 
     public Basic basic;
