@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="aaa" />
+
+                <com.landleaf.everyday.widget.RulerView
+                    android:id="@+id/rulePM25Progress"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:rvLineHeight="5dp"
+                    app:rvMax="200"
+                    app:rvMin="0"
+                    app:rvCurrentValueTextSize="24sp"
+                    app:rvPaintStrokeWidth="1"
+                    app:rvPaintTextSize="20dp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.landleaf.everyday.widget.TimeViewH
+                android:id="@+id/timeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hourSize="@dimen/x10"
+                app:weekSize="@dimen/x8"
+                app:monthSize="@dimen/x8"/>
+
+            <com.landleaf.everyday.widget.CircleTempView
+                android:id="@+id/cvTempOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <com.landleaf.everyday.widget.DialView
+            android:id="@+id/dialView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="error" />
+        <Button
+            android:id="@+id/btError1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="error1" />
+
+        <ProgressBar
+            android:id="@+id/loadProgressBar"
+            style="@android:style/Widget.ProgressBar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:indeterminateDrawable="@drawable/shape_pb_round" />
+
+        <com.landleaf.everyday.widget.CirclePercentView
+            android:id="@+id/circleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cvLayout="top"
+            android:background="@color/colorBettleBackground"
+            android:layout_centerInParent="true"/>
+
+        <com.landleaf.everyday.widget.AirProgressView2
+            android:id="@+id/airProgressView"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:avProgressWidth="@dimen/x200"
+            app:avMax="200"
+            app:avMin="0"
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

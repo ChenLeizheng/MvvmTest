@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlParent">
+
+    <LinearLayout
+        android:layout_width="@dimen/x240"
+        android:layout_height="@dimen/x200"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_dialog_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/x5"
+            android:text="温度设定"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x20" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:layout_marginTop="@dimen/x3"
+            android:background="#29A2E3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x10"
+            android:text="温度设置"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x15" />
+
+        <include layout="@layout/layout_dialog_temp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:layout_marginTop="@dimen/x35"
+            android:background="#29A2E3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlCancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="取消"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x15" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#29A2E3"/>
+
+            <RelativeLayout
+                android:id="@+id/rlSure"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x15" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

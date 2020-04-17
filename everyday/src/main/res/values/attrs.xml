@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RulerView">
+        <!--控件绘制起点-->
+        <attr name="rvMarginStart" format="dimension" />
+        <!--画笔线宽-->
+        <attr name="rvPaintStrokeWidth" format="integer" />
+        <!--最大最小值及一共绘制的多少格-->
+        <attr name="rvMin" format="integer" />
+        <attr name="rvMax" format="integer" />
+        <attr name="rvTotalGrids" format="integer" />
+        <!--刻度值文字的大小-->
+        <attr name="rvPaintTextSize" format="dimension" />
+        <!--基础线高 节点处为2*lineHeight-->
+        <attr name="rvLineHeight" format="dimension" />
+        <!--每格刻度的宽-->
+        <attr name="rvOneGrideWidth" format="dimension" />
+        <attr name="rvPaintColor" format="color" />
+        <attr name="rvPaintProgressColor" format="color" />
+        <attr name="rvCurrentValue" format="integer"/>
+        <attr name="rvCurrentValueTextSize" format="dimension"/>
+        <attr name="rvCurrentValueMargin" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CirclePercentView">
+        <!--控件半径-->
+        <attr name="cvCircleRadius" format="dimension"/>
+        <attr name="cvPaintWidth" format="dimension"/>
+        <!--渐变色属性-->
+        <attr name="cvStartColor" format="color"/>
+        <attr name="cvEndColor" format="color"/>
+        <attr name="cvBackgroundColor" format="color"/>
+        <!--进度条取值范围-->
+        <attr name="cvMin" format="integer"/>
+        <attr name="cvMax" format="integer"/>
+        <attr name="cvCurrentValue" format="float"/>
+        <attr name="cvCurrentValueTextColor" format="color"/>
+        <attr name="cvCurrentValueTextSize" format="dimension"/>
+        <!--中间文字-->
+        <attr name="cvCenterText" format="string"/>
+        <attr name="cvCenterTextColor" format="color"/>
+        <attr name="cvCenterTextSize" format="dimension"/>
+        <attr name="cvLayout"  format="enum">
+            <enum name="top" value="0"/>
+            <enum name="bottom" value="1"/>
+            <enum name="left" value="2"/>
+            <enum name="right" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AirProgressView">
+        <attr name="titleTextSize" format="dimension"/>
+        <attr name="titleTextColor" format="color"/>
+        <attr name="progressWidth" format="dimension"/>
+        <attr name="progressHeight" format="dimension"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="progressBgColor" format="color"/>
+        <attr name="progressTextSize" format="dimension"/>
+        <attr name="progressTextColor" format="color"/>
+        <attr name="titleText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="AirProgressView2">
+        <attr name="avTitleTextSize" format="dimension"/>
+        <attr name="avTitleTextColor" format="color"/>
+        <attr name="avProgressWidth" format="dimension"/>
+        <attr name="avProgressHeight" format="dimension"/>
+        <attr name="avProgressColor" format="color"/>
+        <attr name="avProgressBgColor" format="color"/>
+        <attr name="avProgressTextSize" format="dimension"/>
+        <attr name="avProgressTextColor" format="color"/>
+        <attr name="avTitleText" format="string"/>
+        <attr name="avMax" format="integer"/>
+        <attr name="avMin" format="integer"/>
+    </declare-styleable>
+    
+    <declare-styleable name="LandleafView">
+        <attr name="cCurProgress" format="integer" />
+        <attr name="cStartAngle" format="dimension" />
+        <attr name="cTriangleWidth" format="dimension" />
+        <attr name="cTriangleMargin" format="dimension" />
+        <attr name="cRadius" format="dimension" />
+        <attr name="cLineWidth" format="dimension" />
+        <attr name="cBgColor" format="integer" />
+        <attr name="cProgressColor" format="integer" />
+        <!--新加入的属性-->
+        <attr name="cProgressTextSize" format="dimension" />
+        <attr name="cRangeTextSize" format="dimension" />
+        <attr name="cLevelTextBg" format="integer" />
+        <attr name="cLevelTextSize" format="dimension" />
+        <!--文本-->
+        <attr name="cProgressText" format="string" />
+        <attr name="cMinText" format="string" />
+        <attr name="cMaxText" format="string" />
+        <attr name="cLevelText" format="string" />
+        <attr name="cBoundSize" format="integer" />
+        <!--新加入的属性:中文数据类型，英文数据类型-->
+        <attr name="cChineseAttrName" format="string" />
+        <attr name="cEnglishAttrName" format="string" />
+
+        <attr name="cChineseAttrSize" format="integer" />
+        <attr name="cEnglishAttrSize" format="integer" />
+
+        <attr name="strUnit" format="string"/>
+        <attr name="strUnitSize" format="integer"/>
+        <!--新加入的属性：三恒界面控件-->
+    </declare-styleable>
+    
+    <declare-styleable name="DialView">
+        <!--内外圆半径-->
+        <attr name="dvOutCircleRadius" format="dimension"/>
+        <attr name="dvInCircleRadius" format="dimension"/>
+        <attr name="dvProgressWidth" format="dimension"/>
+        <attr name="dvProgressTextSize" format="dimension"/>
+        <attr name="dvTitleTextSize" format="dimension"/>
+        <attr name="dvMin" format="integer"/>
+        <attr name="dvMax" format="integer"/>
+        <attr name="dvTitle" format="string"/>
+        <attr name="dvStartColor" format="color"/>
+        <attr name="dvEndColor" format="color"/>
+        <attr name="dvBackgroundColor" format="color"/>
+        <attr name="dvDialColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="TimeViewH">
+        <attr name="hourSize" format="dimension" />
+        <attr name="monthSize" format="dimension" />
+        <attr name="weekSize" format="dimension" />
+    </declare-styleable>
+    
+    <declare-styleable name="CircleTempView">
+        <attr name="tvExcircleRadius" format="dimension"/>
+        <attr name="tvExcircleWidth" format="dimension"/>
+        <attr name="tvIncircleWidth" format="dimension"/>
+        <attr name="tvTempTextSize" format="dimension"/>
+        <attr name="tvExcircleColor" format="color"/>
+        <attr name="tvIncircleBgColor" format="color"/>
+        <attr name="tvIncircleColor" format="color"/>
+        <attr name="tvTempColor" format="color"/>
+        <attr name="tvTextType" format="string"/>
+        <attr name="tvTextUnit" format="string"/>
+    </declare-styleable>
+</resources>

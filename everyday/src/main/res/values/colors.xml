@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorTransparent">#20000000</color>
+    <color name="start">#990000FF</color>
+    <color name="start1">#FF45aaf5</color>
+    <color name="end">#00000000</color>
+    <color name="progressColor">#FFE4CC54</color>
+    <color name="progressBg">#47AADF</color>
+    <color name="progressBg2">#2275B6</color>
+    <color name="white">#FFFFFF</color>
+
+
+    <color name="color_excellent">#07cc06</color>
+    <color name="color_good">#efc61c</color>
+    <color name="color_secondary">#e74c09</color>
+    <color name="color_poor">#dd110e</color>
+    <color name="color_bad">#5b100e</color>
+    <color name="colorLineDark">#232325</color>
+    <color name="colorShadowDark">#535257</color>
+    <color name="colorLevelGood">#08ca08</color>
+    <color name="colorLevelMedium">#FFEF1B</color>
+    <color name="colorLevelBad">#FFA500</color>
+    <color name="colorLevel4">#FF4500</color>
+    <color name="colorLevel5">#FF0000</color>
+
+
+    <color name="colorBettleBackground">#000c2d</color>
+</resources>
