@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ActivityStyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:configChanges">keyboardHidden|orientation</item>
+        <item name="android:screenOrientation">landscape</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <!-- 代表 hint 的颜色 -->
+        <item name="android:textColorHint">#C3C3C3</item>
+        <!-- 代表 下划线没有获取焦点的颜色 的颜色 -->
+        <item name="colorControlNormal">#ffd8d8d8</item>
+        <!-- 代表 代表了获取焦点或者点击的时候 下划线 的颜色 -->
+        <item name="colorControlActivated">#ff3586fe</item>
+        <item name="colorControlHighlight">#ff3586fe</item>
+    </style>
+
+</resources>

@@ -1,16 +1,19 @@
 package com.landleaf.mvvm;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
+import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
 
 public class TasksViewModel extends ViewModel {
 
     private final MutableLiveData<Event<String>> mOpenTaskEvent = new MutableLiveData<>();
-    private final MutableLiveData<Event<List<String>>> mOpenTaskEvent2 = new MutableLiveData<>();
+    private final MutableLiveData<List<String>> mOpenTaskEvent2 = new MutableLiveData<>();
 
     public LiveData<Event<String>> getOpenTaskEvent() {
         return mOpenTaskEvent;
@@ -21,7 +24,21 @@ public class TasksViewModel extends ViewModel {
         mOpenTaskEvent.setValue(new Event<>(taskId));
     }
 
-    void save(List<String> list){
-        mOpenTaskEvent2.postValue(new Event<List<String>>(list));
+    public void save(List<String> list){
+        mOpenTaskEvent2.setValue(list);
+    }
+
+    public LiveData<List<String>> read(){
+        return mOpenTaskEvent2;
+    }
+
+    public LiveData<String> useMap(){
+        LiveData<String> map = Transformations.map(mOpenTaskEvent, new Function<Event<String>, String>() {
+            @Override
+            public String apply(Event<String> input) {
+                return input.getContent();
+            }
+        });
+        return map;
     }
 }

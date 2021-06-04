@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Normal</string>
+
+    <string name="str_level_shushi">舒适</string>
+    <string name="str_level_lianghao">良好</string>
+    <string name="str_level_jiaocha">较差</string>
+
+    <!--天气-->
+    <string name="str_loading">加载中…</string>
+    <string name="tvCold">感冒</string>
+    <string name="tvCalender">万年历</string>
+    <string name="tvSport">运动</string>
+    <string name="tvSunny">紫外线</string>
+    <string name="tvGetDress">穿衣</string>
+
+    <string name="tvPm25Out">室外PM2.5</string>
+    <string name="tvHumidityOut">室外湿度</string>
+    <string name="tvTempOut">室外温度</string>
+
+    <string name="tvPm25In">室内PM2.5</string>
+    <string name="tvHumidityIn">室内湿度</string>
+    <string name="tvTempIn">室内温度</string>
+    <string name="tvArofeneIn">甲醛含量</string>
+    <string name="tvCO2In">室内二氧化碳</string>
+
+    <!--暖通-->
+    <string name="nt_jiashi_status">加湿状态</string>
+    <string name="nt_scene_mode">场景模式:</string>
+    <string name="nt_set_wind">新风设定:</string>
+    <string name="nt_set_air">空调设定:</string>
+    <string name="nt_set_temp">温度设定:</string>
+    <string name="nt_tips">点击进行设定</string>
+    <string name="nt_temp_unit">℃</string>
+    <string name="nt_wind_unit">m³/h</string>
+</resources>

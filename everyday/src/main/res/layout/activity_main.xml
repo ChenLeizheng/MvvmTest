@@ -7,26 +7,77 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/ivClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dianying"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvAAA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        app:layout_constraintLeft_toRightOf="@id/ivClick"
+        app:layout_constraintTop_toTopOf="@id/ivClick"
+        android:text="aaa"/>
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tvAAA"
+        app:layout_constraintTop_toTopOf="@id/tvAAA"
+        android:text="bbb"/>
+
+<!--    <com.landleaf.everyday.widget.SvgMapView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+
+    <TextView
+        android:id="@+id/tvDelay"
+        android:textSize="32sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.landleaf.everyday.widget.LandleafView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cMaxText="30"
-        app:cMinText="16"
-        app:cLevelText="舒适"
-        app:cLevelTextSize="20sp"
-        app:cProgressText="24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <com.landleaf.everyday.widget.SensorLinearLayout
+        android:id="@+id/sensorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/colorTransparent"
+        android:id="@+id/recyclerView"
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/sensorView"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:showText="true"
+        android:switchTextAppearance="@style/SwitchTheme"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:thumb="@drawable/switch_rectangle_thumb_selector"
+        android:track="@drawable/switch_rectangle_track" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

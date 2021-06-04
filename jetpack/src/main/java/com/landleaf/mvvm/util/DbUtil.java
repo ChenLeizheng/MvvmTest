@@ -12,6 +12,7 @@ import com.landleaf.mvvm.db.DaoSession;
 import com.landleaf.mvvm.db.Province;
 import com.landleaf.mvvm.db.ProvinceDao;
 
+import java.io.InputStream;
 import java.util.List;
 
 public class DbUtil {

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/x5">
+
+        <ImageView
+            android:id="@+id/ivIcon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_scene_home" />
+
+        <TextView
+            android:id="@+id/tvName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在家"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/x5">
+
+        <ImageView
+            android:id="@+id/ivIcon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_scene_home" />
+
+        <TextView
+            android:id="@+id/tvName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在家2"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/x5">
+
+        <ImageView
+            android:id="@+id/ivIcon3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_scene_home" />
+
+        <TextView
+            android:id="@+id/tvName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在家3"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/x5">
+
+        <ImageView
+            android:id="@+id/ivIcon4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_scene_home" />
+
+        <TextView
+            android:id="@+id/tvName4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在家4"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_background">
+
+    <LinearLayout
+        android:layout_width="@dimen/y110"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x15"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPlcIp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="plc ip"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="设备IP地址">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDeviceIp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/selector_et_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="子网掩码">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/selector_et_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="网关">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etGateway"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/selector_et_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DNS">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDNS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/selector_et_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x3"
+            android:layout_marginTop="@dimen/x7"
+            android:layout_marginEnd="@dimen/x3">
+
+            <CheckBox
+                android:id="@+id/cbDhcp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DHCP"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvDhcpIp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/x10"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            
+            <Button
+                android:id="@+id/btSure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认修改"/>
+
+            <Button
+                android:id="@+id/btChangePoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="面板修改"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+</RelativeLayout>

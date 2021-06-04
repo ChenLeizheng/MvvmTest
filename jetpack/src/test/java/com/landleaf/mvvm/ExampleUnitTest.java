@@ -18,5 +18,9 @@ public class ExampleUnitTest {
         String s = "10";
         boolean matches = s.matches("\\d+");
         System.out.println(matches);
+        int a = 20;
+        for (int i = 0; i < 100; i++) {
+            System.out.println(i+","+(i==i*10/10f));
+        }
     }
 }

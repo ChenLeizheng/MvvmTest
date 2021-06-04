@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--    无视设备的真实分辨率，直接通过dpi，在物理尺寸和浏览器之间重设分辨率-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>配置管理页</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">朗绿大屏后台管理系统</div>
+    </div>
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+        <legend>基本信息</legend>
+    </fieldset>
+
+    <form class="layui-form" action="" style="margin-top: 10px;">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">楼栋</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="floorId" name="floorId" required
+                           lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">单元</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="unitId" name="unitId" required lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">户型</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="roomType" name="roomType" required
+                           lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">户号</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="roomId" lay-verify="roomId" autocomplete="off"
+                           class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">IP</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="ipAddress" name="ipAddress" required
+                           lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">MAC</label>
+                <div class="layui-input-block">
+                    <input type="text" id="deviceID" name="deviceID" required
+                           lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<script src="layui/layui.all.js"></script>
+
+<script src="js/jquery.qrcode.js"></script>
+
+<script src="js/qrcode.js"></script>
+
+<script src="js/axios.min.js"></script>
+
+<script>
+    //JavaScript代码区域
+
+    //主动加载jquery模块
+    layui.use(['jquery', 'layer'], function () {
+        var $ = layui.$, layer = layui.layer;
+
+        //后面就跟你平时使用jQuery一样
+        // $('.layui-body').append('hello jquery');
+    });
+
+    $(function () {
+        axios.get('/user/register/info')
+            .then(function (response) {
+                var result = response.data.data;
+                layui.use(['jquery', 'layer'], function () {
+                    var $ = layui.$, layer = layui.layer;
+                    $("input[name='floorId']").val(result.floorId);
+                    $("input[name='unitId']").val(result.unitId);
+                    $("input[name='roomType']").val(result.roomType);
+                    $("input[name='roomId']").val(result.roomId);
+                    $("input[name='ipAddress']").val(result.ipAddress);
+                    $("input[name='deviceID']").val(result.deviceID);
+                });
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    });
+
+
+
+
+</script>
+</body>
+</html>

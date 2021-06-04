@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvSetTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="30"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvSetTemp"
+        app:layout_constraintLeft_toRightOf="@id/tvSetTemp"
+        android:textSize="15sp"
+        android:text="℃"/>
+
+    <TextView
+        android:id="@+id/tvSetTemp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tvSetTemp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        android:text="30"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvSetTemp2"
+        app:layout_constraintLeft_toRightOf="@id/tvSetTemp2"
+        android:textSize="15sp"
+        android:text="℃"/>
+
+    <ImageView
+        android:id="@+id/ivTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/img_weather_temp"/>
+
+
+    <TextView
+        android:id="@+id/tvTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ivTemp"
+        app:layout_constraintBottom_toBottomOf="@id/ivTemp"
+        app:layout_constraintLeft_toRightOf="@id/ivTemp"
+        android:layout_marginLeft="@dimen/x5"
+        android:text="28℃"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvTemp"
+        app:layout_constraintLeft_toLeftOf="@id/tvTemp"
+        android:text="aaaa"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+
+    <ImageView
+        android:id="@+id/ivTemp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintRight_toRightOf="@+id/guideline"
+        android:src="@drawable/img_weather_temp"/>
+
+
+    <TextView
+        android:id="@+id/tvTemp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ivTemp"
+        app:layout_constraintBottom_toBottomOf="@id/ivTemp2"
+        app:layout_constraintLeft_toRightOf="@id/ivTemp2"
+        android:layout_marginLeft="@dimen/x5"
+        android:text="28℃"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvTemp2"
+        app:layout_constraintLeft_toLeftOf="@id/tvTemp2"
+        android:text="aaaa"/>
+
+    <ImageView
+        android:id="@+id/ivIcon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="15px"
+        android:src="@drawable/img_weather_temp"/>
+
+    <ImageView
+        android:id="@+id/ivIcon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/ivIcon1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="25px"
+        android:src="@drawable/img_weather_temp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

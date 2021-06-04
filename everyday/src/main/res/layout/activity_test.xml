@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/img_test_bg"
+    xmlns:customBallView="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -28,6 +30,7 @@
 
                 <com.landleaf.everyday.widget.RulerView
                     android:id="@+id/rulePM25Progress"
+                    android:visibility="gone"
                     android:background="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -37,6 +40,10 @@
                     app:rvCurrentValueTextSize="24sp"
                     app:rvPaintStrokeWidth="1"
                     app:rvPaintTextSize="20dp" />
+
+                <com.landleaf.everyday.widget.MyBitmapViewAnother
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
 
@@ -68,7 +75,26 @@
         android:layout_weight="1"
         android:layout_height="match_parent">
 
+        <com.landleaf.everyday.widget.HumitureCircleView
+            android:id="@+id/humitureCircleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:hvHumidityTextSize="@dimen/x12"
+            app:hvTempTextSize="@dimen/x27"
+            app:hvCircleRadius="@dimen/x54"
+            app:hvCircleMargin="@dimen/x3"/>
+
+        <com.landleaf.everyday.widget.HumitureCircleView2
+            android:id="@+id/humitureCircleView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:hvCircleRadius="@dimen/x54"
+            app:hvCircleMargin="@dimen/x3" />
+
         <com.landleaf.everyday.widget.DialView
+            android:visibility="gone"
             android:id="@+id/dialView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

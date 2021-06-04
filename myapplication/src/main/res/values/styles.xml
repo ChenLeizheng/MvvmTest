@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextNumStyle">
+        <item name="android:layout_height">60px</item>
+        <item name="android:layout_width">120px</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:layout_margin">10px</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/shape_num_bg</item>
+    </style>
+</resources>

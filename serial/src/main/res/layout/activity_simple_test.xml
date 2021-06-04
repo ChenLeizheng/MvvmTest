@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinnerDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/device">
+
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/spinnerAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:entries="@array/address">
+
+        </Spinner>
+
+        <Button
+            android:id="@+id/btSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEND"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvReceiveData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tvParseData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+
+    <Button
+        android:id="@+id/btReadStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btReadStatus"/>
+
+    <Button
+        android:id="@+id/btWriteStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btWriteStatus"/>
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="@dimen/x315"
+        android:layout_height="@dimen/x210"
+        android:background="@drawable/shape_dialog"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/x30"
+            android:src="@drawable/img_lvwnag_tips_alarm"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x76"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/x15"
+                android:text="滤网即将到期"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/x10"
+                android:textSize="@dimen/x15"
+                android:text="请在7天内更换"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDelay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/x21"
+            android:layout_marginBottom="@dimen/x32"
+            android:gravity="center"
+            android:text="2天后提醒"
+            android:background="@drawable/img_tips_delay"/>
+
+        <TextView
+            android:id="@+id/tvHandler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x21"
+            android:layout_marginBottom="@dimen/x32"
+            android:gravity="center"
+            android:text="呼叫物业"
+            android:background="@drawable/img_tips_handler"/>
+    </RelativeLayout>

@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+
+
+
+    defaultConfig {
+        applicationId "com.landleaf.serial"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ["libs"]
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api 'io.reactivex.rxjava2:rxjava:2.1.7'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'org.apache.mina:mina-core:2.0.16'
+    implementation 'com.google.code.gson:gson:2.8.5'
+//    implementation (name:'app-MoJing_REL_Version', ext:'aar')
+//    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+}

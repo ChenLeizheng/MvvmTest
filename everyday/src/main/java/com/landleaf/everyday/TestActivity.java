@@ -21,10 +21,12 @@ import com.landleaf.everyday.widget.AirProgressView2;
 import com.landleaf.everyday.widget.CirclePercentView;
 import com.landleaf.everyday.widget.CircleTempView;
 import com.landleaf.everyday.widget.DialView;
+import com.landleaf.everyday.widget.HumitureCircleView;
+import com.landleaf.everyday.widget.HumitureCircleView1;
+import com.landleaf.everyday.widget.HumitureCircleView2;
 import com.landleaf.everyday.widget.RulerView;
 import com.landleaf.everyday.widget.TimeViewH;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -33,7 +35,6 @@ import java.util.List;
 public class TestActivity extends Activity {
 
     private List<Integer> indexError;
-    private CirclePercentView circleView;
     private AirProgressView2 airProgressView;
     private int temp;
     private TimeViewH timeView;
@@ -45,16 +46,12 @@ public class TestActivity extends Activity {
         Button btError = findViewById(R.id.btError);
         Button btError1 = findViewById(R.id.btError1);
         final RulerView rulePM25Progress = findViewById(R.id.rulePM25Progress);
-        circleView = findViewById(R.id.circleView);
         airProgressView = findViewById(R.id.airProgressView);
         final DialView dialView = findViewById(R.id.dialView);
         timeView = findViewById(R.id.timeView);
         final CircleTempView cvTempOut = findViewById(R.id.cvTempOut);
-        Context cont = this.getApplicationContext();
-        String ethernet_static_dns1 = Settings.System.getString(cont.getContentResolver(), "ethernet_static_dns1");
-        Log.d("TestActivity", ethernet_static_dns1);
-
-        Settings.System.putString(cont.getContentResolver(), "ethernet_static_dns1", "0.0.0.0");
+        final HumitureCircleView humitureCircleView = findViewById(R.id.humitureCircleView);
+        final HumitureCircleView2 humitureCircleView1 = findViewById(R.id.humitureCircleView1);
         btError.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -75,10 +72,11 @@ public class TestActivity extends Activity {
             @Override
             public void onClick(View v) {
                 rulePM25Progress.setProgress(22);
-                circleView.setProgress(49.5f,"℃");
                 airProgressView.setProgress(62.9f,"ug/m³",true,"优");
                 dialView.setProgress(300,"m/s",false);
                 cvTempOut.setProgress(37,false);
+                humitureCircleView.setProgress(25.58f,99.9f);
+                humitureCircleView1.setProgress(1);
 //                PopUtils.getInstance().showSetTempDialog(TestActivity.this, new DialogCallback() {
 //                    @Override
 //                    public void onSure(String result) {

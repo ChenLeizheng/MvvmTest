@@ -1,1 +1,3 @@
-include ':jetpack'
+include ':jetpack', ':serial', ':testapp', ':everyday', ':jetpack_node', ':normal', ':annotation', ':andserverapi'
+include ':kotlin'
+include ':myapplication'

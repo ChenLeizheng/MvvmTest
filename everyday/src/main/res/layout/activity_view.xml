@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_test_bg">
+
+    <com.landleaf.everyday.widget.FlowLayout
+        android:visibility="gone"
+        android:layout_width="150px"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/color_good">
+
+        <TextView
+            android:text="Welcome"
+            style="@style/text_flag_01"/>
+        <TextView
+            android:text="FlowLayout"
+            style="@style/text_flag_01"
+            android:lines="1"
+            android:ellipsize="end"/>
+    </com.landleaf.everyday.widget.FlowLayout>
+
+    <RadioGroup
+        android:visibility="gone"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_centerInParent="true"
+        android:background="@color/color_good">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="AAA"
+            android:drawablePadding="@dimen/x15"
+            android:drawableLeft="@drawable/img_nt_mode_zhileng_on"
+            android:drawableRight="@drawable/selector_dialog_temp_minus"/>
+
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/btSend"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onViewClick"
+        android:text="send"/>
+
+    <com.landleaf.everyday.widget.TimeView
+        android:visibility="gone"
+        android:id="@+id/timeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="255"
+            android:textSize="@dimen/x20"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/x10"
+            android:text="ug/m3"/>
+
+        <com.landleaf.everyday.widget.SelectLineTextView
+            android:id="@+id/lv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lineTvTextColor="@color/white"
+            app:lineTvTextSize="@dimen/x7"
+            app:lineTvLineMarginLeft="@dimen/x1"
+            app:lineTvLineMarginTop="@dimen/y1"
+            app:lineTvLineWidth="@dimen/x1"/>
+
+        <com.landleaf.everyday.widget.SelectLineTextView
+            android:id="@+id/lv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x7"
+            app:lineTvTextColor="@color/white"
+            app:lineTvTextSize="@dimen/x7"
+            app:lineTvLineMarginLeft="@dimen/x1"
+            app:lineTvLineMarginTop="@dimen/y1"
+            app:lineTvLineWidth="@dimen/x1"/>
+
+        <com.landleaf.everyday.widget.SelectLineTextView
+            android:id="@+id/lv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x7"
+            app:lineTvTextColor="@color/white"
+            app:lineTvTextSize="@dimen/x7"
+            app:lineTvLineMarginLeft="@dimen/x1"
+            app:lineTvLineMarginTop="@dimen/y1"
+            app:lineTvLineWidth="@dimen/x1"/>
+    </LinearLayout>
+
+    <com.landleaf.everyday.widget.ModeView
+        android:id="@+id/modeView"
+        android:onClick="onViewClick"
+        android:layout_alignParentBottom="true"
+        app:modeName="aaaaaaaa"
+        app:modeImageSelect="@drawable/img_nt_mode_tongfeng_on"
+        app:modeImageUnSelected="@drawable/img_nt_mode_tongfeng_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="@dimen/x200"
+        android:layout_height="@dimen/x30"
+        android:layout_alignParentRight="true">
+        <com.landleaf.everyday.widget.WindSpeedView
+            android:id="@+id/windSpeedView"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <com.landleaf.everyday.wheelview.WheelItemView
+            android:id="@+id/wheel_view_left"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:wheelTextColor="@color/white"
+            app:wheelMaskLineColor="#40424B"
+            app:wheelItemVerticalSpace="12dp"
+            app:wheelShowCount="1"
+            app:wheelTotalOffsetX="0dp" />
+        <com.landleaf.everyday.wheelview.WheelItemView
+            android:visibility="gone"
+            android:id="@+id/wheel_view_right"
+            android:layout_centerInParent="true"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:wheelTextColor="@color/white"
+            app:wheelMaskLineColor="#40424B"
+            app:wheelItemVerticalSpace="12dp"
+            app:wheelShowCount="1"
+            app:wheelTotalOffsetX="0dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/y116"
+        android:layout_height="@dimen/x38"
+        android:layout_marginStart="@dimen/y14"
+        android:layout_marginEnd="@dimen/y14"
+        android:background="@color/colorBettleBackground"
+        android:layout_centerInParent="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.landleaf.everyday.widget.BannerIndicator
+            android:id="@+id/BannerIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/x10"
+            app:biDotSpace="@dimen/x3"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

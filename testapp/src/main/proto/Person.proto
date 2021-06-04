@@ -1,0 +1,11 @@
+syntax = "proto3";
+//生成java类所在的包名
+package com.landleaf.testapp;
+option java_outer_classname = "PersonProto";
+
+//结构体
+message Person{
+    string name = 1;
+    string phone = 2;
+    string sex = 3;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="havc_text_margin">@dimen/x2</dimen>
+    <dimen name="havc_text_size">@dimen/x7</dimen>
+    <dimen name="common_dp">@dimen/x10</dimen>
+    <dimen name="big_text_size">27sp</dimen>
+    <dimen name="txt_normal_size">22sp</dimen>
+</resources>

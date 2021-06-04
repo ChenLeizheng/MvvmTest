@@ -1,5 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="SensorLinearLayout">
+        <attr name="sensorTvType" format="string"/>
+        <attr name="sensorTvData" format="string"/>
+        <attr name="sensorTvUnit" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="ModeView">
+        <attr name="modeImageSelect" format="reference"/>
+        <attr name="modeImageUnSelected" format="reference"/>
+        <attr name="modeName" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="SelectLineTextView">
+        <attr name="lineTvText" format="string"/>
+        <attr name="lineTvTextSize" format="dimension"/>
+        <attr name="lineTvLineWidth" format="dimension"/>
+        <attr name="lineTvLineMarginTop" format="dimension"/>
+        <attr name="lineTvLineMarginLeft" format="dimension"/>
+        <attr name="lineTvTextColor" format="color"/>
+        <attr name="lineTvSelectTextColor" format="color"/>
+        <attr name="lineTvSelectLineColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="WindSpeedView">
+        <attr name="windViewHeight" format="dimension"/>
+        <attr name="windViewWidth" format="dimension"/>
+        <attr name="windSpeedSpace" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="HumitureCircleView">
+        <attr name="hvCircleRadius" format="dimension"/>
+        <attr name="hvCircleMargin" format="dimension"/>
+        <attr name="hvProgressWidth" format="dimension"/>
+        <attr name="hvTempTextSize" format="dimension"/>
+        <attr name="hvHumidityTextSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="DialView">
+        <!--内外圆半径-->
+        <attr name="dvOutCircleRadius" format="dimension"/>
+        <attr name="dvInCircleRadius" format="dimension"/>
+        <attr name="dvProgressWidth" format="dimension"/>
+        <attr name="dvProgressTextSize" format="dimension"/>
+        <attr name="dvTitleTextSize" format="dimension"/>
+        <attr name="dvMin" format="integer"/>
+        <attr name="dvMax" format="integer"/>
+        <attr name="dvTitle" format="string"/>
+        <attr name="dvStartColor" format="color"/>
+        <attr name="dvEndColor" format="color"/>
+        <attr name="dvBackgroundColor" format="color"/>
+        <attr name="dvDialColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="BannerIndicator">
+        <attr name="biSelectDotColor" format="color"/>
+        <attr name="biUnSelectDotColor" format="color"/>
+        <attr name="biDotRadius" format="dimension"/>
+        <attr name="biDotSpace" format="dimension"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="customBallView">
+
+        <attr name="centerText" format="string"></attr>
+
+        <attr name="centerTextSize" format="dimension"></attr>
+
+        <attr name="centerTextColor" format="color"></attr>
+
+        <attr name="ballColor" format="color"></attr>
+
+        <attr name="cbvProgressColor" format="color"></attr>
+
+        <attr name="ballRadius" format="dimension"></attr>
+
+    </declare-styleable>
+
     <declare-styleable name="RulerView">
         <!--控件绘制起点-->
         <attr name="rvMarginStart" format="dimension" />
@@ -106,21 +183,7 @@
         <!--新加入的属性：三恒界面控件-->
     </declare-styleable>
     
-    <declare-styleable name="DialView">
-        <!--内外圆半径-->
-        <attr name="dvOutCircleRadius" format="dimension"/>
-        <attr name="dvInCircleRadius" format="dimension"/>
-        <attr name="dvProgressWidth" format="dimension"/>
-        <attr name="dvProgressTextSize" format="dimension"/>
-        <attr name="dvTitleTextSize" format="dimension"/>
-        <attr name="dvMin" format="integer"/>
-        <attr name="dvMax" format="integer"/>
-        <attr name="dvTitle" format="string"/>
-        <attr name="dvStartColor" format="color"/>
-        <attr name="dvEndColor" format="color"/>
-        <attr name="dvBackgroundColor" format="color"/>
-        <attr name="dvDialColor" format="color"/>
-    </declare-styleable>
+
 
     <declare-styleable name="TimeViewH">
         <attr name="hourSize" format="dimension" />

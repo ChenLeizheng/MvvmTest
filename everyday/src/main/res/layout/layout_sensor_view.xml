@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@drawable/img_tips_handler">
+
+    <TextView
+        android:id="@+id/tvDataType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center_horizontal"
+        android:text="CO2"/>
+
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center_horizontal"
+        android:text="2"/>
+
+    <TextView
+        android:id="@+id/tvDataUnit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center_horizontal"
+        android:text="%"/>
+</merge>

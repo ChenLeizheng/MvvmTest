@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/havc_text_margin"
+                    android:text="电源开关"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/havc_text_size" />
+
+                <ImageView
+                    android:id="@+id/ivPower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_21_power_off" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_horizontal_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/havc_text_margin"
+                    android:src="@drawable/icon_21_temp_humidity" />
+
+                <TextView
+                    android:id="@+id/tvShowTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/x7"
+                    android:text="22℃"
+                    android:textColor="#ACACAC"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tvShowHumidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/x7"
+                    android:text="22%"
+                    android:textColor="#ACACAC"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/view_vertical_line" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <com.landleaf.normal.widght.LandleafView
+                android:id="@+id/myCustomLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:cLevelText="制热"
+                app:cLevelTextSize="@dimen/x7"
+                app:cLineWidth="@dimen/x7"
+                app:cMaxText="30"
+                app:cMinText="0"
+                app:cProgressText="0.00"
+                app:cProgressTextSize="@dimen/x36"
+                app:cRadius="@dimen/x54"
+                app:cRangeTextSize="@dimen/x7"
+                app:cTriangleWidth="@dimen/x6" />
+
+            <ImageView
+                android:id="@+id/ivMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/havc_text_margin"
+                android:src="@drawable/selector_hvac_minus" />
+
+            <ImageView
+                android:id="@+id/ivPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/havc_text_margin"
+                android:src="@drawable/selector_hvac_plus" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/view_vertical_line" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="滤网使用时间"
+                    android:layout_margin="@dimen/havc_text_margin"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/havc_text_size" />
+
+                <TextView
+                    android:id="@+id/tvUsedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/x12"
+                    android:text="13小时"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/ivClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/x12"
+                    android:src="@drawable/selector_hvac_clear" />
+            </LinearLayout>
+
+            <include layout="@layout/view_horizontal_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/havc_text_margin"
+                    android:text="离家状态"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/havc_text_size" />
+
+
+                <ImageView
+                    android:id="@+id/ivLijia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_21_lijia_off" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_horizontal_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/havc_text_margin"
+                    android:text="模式调节"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/havc_text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/ivModeSummer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_21_mode_zhileng" />
+
+                    <ImageView
+                        android:id="@+id/ivModeWinter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/havc_text_margin"
+                        android:src="@drawable/icon_21_mode_zhire" />
+
+                    <ImageView
+                        android:id="@+id/ivModeWind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/havc_text_margin"
+                        android:src="@drawable/icon_21_mode_tongfeng" />
+
+                    <ImageView
+                        android:id="@+id/ivModeChushi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/havc_text_margin"
+                        android:src="@drawable/icon_21_mode_chushi" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_vertical_line" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/havc_text_margin"
+                    android:text="风量调节"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/havc_text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/ivGao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_21_speed_gao" />
+
+                    <ImageView
+                        android:id="@+id/ivDi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/havc_text_margin"
+                        android:src="@drawable/icon_21_speed_di" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlJiashi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/havc_text_margin"
+                    android:text="@string/nt_jiashi_status"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/havc_text_size" />
+
+                <ImageView
+                    android:id="@+id/ivJiashi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_21_jiashi" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/view_horizontal_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="30dp">
+
+            <com.landleaf.normal.widght.helpers.PagerContainer
+                android:id="@+id/pc_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.landleaf.normal.widght.DynamicViewPager
+                    android:id="@+id/dvp_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+            </com.landleaf.normal.widght.helpers.PagerContainer>
+
+            <com.landleaf.normal.widght.CircleIndicator
+                android:id="@+id/cid_room"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_alignBottom="@id/pc_room"
+                android:layout_centerHorizontal="true"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

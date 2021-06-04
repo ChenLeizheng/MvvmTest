@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="excircleColor">#20FDFDFD</color>
+    <color name="rippleColor">#44FFFFFF</color>
+
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
@@ -26,6 +29,13 @@
     <color name="colorLevel4">#FF4500</color>
     <color name="colorLevel5">#FF0000</color>
 
-
+    <color name="des_color">#333333</color>
+    <!-- theme one -->
+    <color name="t1_color1">#e7eaf6</color>
+    <color name="t1_color2">#a2a8d3</color>
+    <color name="t1_color3">#38598b</color>
+    <color name="t1_color4">#113f67</color>
+    <color name="t1_outline">#ffffff</color>
+    <color name="t1_sel_color">#e4406f</color>
     <color name="colorBettleBackground">#000c2d</color>
 </resources>

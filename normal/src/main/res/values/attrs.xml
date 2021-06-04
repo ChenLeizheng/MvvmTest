@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TimeView">
+        <attr name="hourSize" format="dimension" />
+        <attr name="monthSize" format="dimension" />
+        <attr name="weekSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RulerView">
+        <!--控件绘制起点-->
+        <attr name="rvMarginStart" format="dimension" />
+        <!--画笔线宽-->
+        <attr name="rvPaintStrokeWidth" format="integer" />
+        <!--最大最小值及一共绘制的多少格-->
+        <attr name="rvMin" format="integer" />
+        <attr name="rvMax" format="integer" />
+        <attr name="rvTotalGrids" format="integer" />
+        <!--刻度值文字的大小-->
+        <attr name="rvPaintTextSize" format="dimension" />
+        <!--基础线高 节点处为2*lineHeight-->
+        <attr name="rvLineHeight" format="dimension" />
+        <!--每格刻度的宽-->
+        <attr name="rvOneGrideWidth" format="dimension" />
+        <attr name="rvPaintColor" format="color" />
+        <attr name="rvPaintProgressColor" format="color" />
+        <attr name="rvCurrentValue" format="integer"/>
+        <attr name="rvCurrentValueTextSize" format="dimension"/>
+        <attr name="rvCurrentValueMargin" format="dimension"/>
+        <attr name="rvCurrentValueColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="LandleafView">
+        <attr name="cCurProgress" format="integer" />
+        <attr name="cStartAngle" format="integer" />
+        <attr name="cTriangleWidth" format="dimension" />
+        <attr name="cTriangleMargin" format="dimension" />
+        <attr name="cRadius" format="dimension" />
+        <attr name="cLineWidth" format="dimension" />
+        <attr name="cBgColor" format="integer" />
+        <attr name="cProgressColor" format="integer" />
+        <!--新加入的属性-->
+        <attr name="cProgressTextSize" format="dimension" />
+        <attr name="cRangeTextSize" format="dimension" />
+        <attr name="cLevelTextBg" format="integer" />
+        <attr name="cLevelTextSize" format="dimension" />
+        <!--文本-->
+        <attr name="cProgressText" format="string" />
+        <attr name="cMinText" format="string" />
+        <attr name="cMaxText" format="string" />
+        <attr name="cLevelText" format="string" />
+        <attr name="cBoundSize" format="dimension" />
+        <!--新加入的属性:中文数据类型，英文数据类型-->
+        <attr name="cChineseAttrName" format="string" />
+        <attr name="cEnglishAttrName" format="string" />
+
+        <attr name="cChineseAttrSize" format="dimension" />
+        <attr name="cEnglishAttrSize" format="dimension" />
+
+        <attr name="strUnit" format="string"/>
+        <attr name="strUnitSize" format="dimension"/>
+        <!--新加入的属性：三恒界面控件-->
+    </declare-styleable>
+
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_width" format="dimension"/>
+        <attr name="ci_height" format="dimension"/>
+        <attr name="ci_margin" format="dimension"/>
+        <attr name="ci_animator" format="reference"/>
+        <attr name="ci_animator_reverse" format="reference"/>
+        <attr name="ci_drawable" format="reference"/>
+        <attr name="ci_drawable_unselected" format="reference"/>
+
+        <attr name="ci_orientation" format="enum">
+            <!-- Defines an horizontal widget. -->
+            <enum name="horizontal" value="0"/>
+            <!-- Defines a vertical widget. -->
+            <enum name="vertical" value="1"/>
+        </attr>
+
+        <attr name="ci_gravity">
+            <!-- Push object to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30"/>
+            <!-- Push object to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50"/>
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03"/>
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05"/>
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10"/>
+            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70"/>
+            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01"/>
+            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            <flag name="fill_horizontal" value="0x07"/>
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11"/>
+            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill" value="0x77"/>
+            <!-- Additional option that can be set to have the top and/or bottom edges of
+            the child clipped to its container's bounds.
+            The clip will be based on the vertical gravity: a top gravity will clip the bottom
+            edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            <flag name="clip_vertical" value="0x80"/>
+            <!-- Additional option that can be set to have the left and/or right edges of
+            the child clipped to its container's bounds.
+            The clip will be based on the horizontal gravity: a left gravity will clip the right
+            edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            <flag name="clip_horizontal" value="0x08"/>
+            <!-- Push object to the beginning of its container, not changing its size. -->
+            <flag name="start" value="0x00800003"/>
+            <!-- Push object to the end of its container, not changing its size. -->
+            <flag name="end" value="0x00800005"/>
+        </attr>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+</resources>

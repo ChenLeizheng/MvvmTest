@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/calculator"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textSize="20sp"
+        android:text="1+1=2"/>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="4"
+        android:rowCount="5">
+
+        <TextView
+            android:id="@+id/tvBack"
+            style="@style/TextNumStyle"
+            android:text="Back"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            style="@style/TextNumStyle"
+            android:text="("/>
+
+        <TextView
+            android:id="@+id/tvRight"
+            style="@style/TextNumStyle"
+            android:text=")"/>
+
+        <TextView
+            android:id="@+id/tvClear"
+            style="@style/TextNumStyle"
+            android:text="CE"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/tvSeven"
+            style="@style/TextNumStyle"
+            android:text="7"/>
+
+        <TextView
+            android:id="@+id/tvEight"
+            style="@style/TextNumStyle"
+            android:text="8"/>
+
+        <TextView
+            android:id="@+id/tvNine"
+            style="@style/TextNumStyle"
+            android:text="9"/>
+
+        <TextView
+            android:id="@+id/tvDivide"
+            style="@style/TextNumStyle"
+            android:text="/"/>
+
+        <TextView
+            android:id="@+id/tvFour"
+            style="@style/TextNumStyle"
+            android:text="4"/>
+
+        <TextView
+            android:id="@+id/tvFive"
+            style="@style/TextNumStyle"
+            android:text="5"/>
+
+        <TextView
+            android:id="@+id/tvSix"
+            style="@style/TextNumStyle"
+            android:text="6"/>
+
+        <TextView
+            android:id="@+id/tvMultiply"
+            style="@style/TextNumStyle"
+            android:text="*"/>
+
+        <TextView
+            android:id="@+id/tvOne"
+            style="@style/TextNumStyle"
+            android:text="1"/>
+
+        <TextView
+            android:id="@+id/tvTwo"
+            style="@style/TextNumStyle"
+            android:text="2"/>
+
+        <TextView
+            android:id="@+id/tvThree"
+            style="@style/TextNumStyle"
+            android:text="3"/>
+
+        <TextView
+            android:id="@+id/tvPlus"
+            style="@style/TextNumStyle"
+            android:text="+"/>
+
+        <TextView
+            android:id="@+id/tvZero"
+            style="@style/TextNumStyle"
+            android:text="0"/>
+
+        <TextView
+            android:id="@+id/tvDot"
+            style="@style/TextNumStyle"
+            android:text="."/>
+
+        <TextView
+            android:id="@+id/tvEqual"
+            style="@style/TextNumStyle"
+            android:text="="/>
+
+        <TextView
+            android:id="@+id/tvMinus"
+            style="@style/TextNumStyle"
+            android:text="-"/>
+    </GridLayout>
+
+</LinearLayout>

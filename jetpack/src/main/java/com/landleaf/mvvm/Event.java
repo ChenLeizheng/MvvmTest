@@ -44,4 +44,8 @@ public class Event<T> {
     public boolean hasBeenHandled() {
         return hasBeenHandled;
     }
+
+    public T getContent() {
+        return mContent;
+    }
 }

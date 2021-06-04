@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/dateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="2020.05.20"
+        android:textSize="@dimen/x9"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/weekView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="星期三"
+        android:textSize="@dimen/x9"
+        android:layout_marginLeft="@dimen/x7"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/hourView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:30"
+        android:textSize="@dimen/x9"
+        android:layout_marginLeft="@dimen/x7"
+        android:textColor="@color/white"/>
+
+</merge>

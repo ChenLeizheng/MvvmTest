@@ -1,10 +1,15 @@
 package com.landleaf.everyday;
 
+import com.landleaf.everyday.gof.proxy.IUserController;
+import com.landleaf.everyday.gof.proxy.MetricsCollectorProxy;
+import com.landleaf.everyday.gof.proxy.UserController;
+
 import org.junit.Test;
 
 import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.Date;
 import java.util.Locale;
 
@@ -18,9 +23,23 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
+        MetricsCollectorProxy metricsCollectorProxy = new MetricsCollectorProxy();
+        IUserController proxy = metricsCollectorProxy.createProxy(new UserController());
+        //start===========
+        //UserController login
+        //end===========
+        proxy.login("aa","123");
+        String unit = "℃";
+        System.out.println(unit.length());
 //        assertEquals(4, 2 + 2);
 //        int[] array = {95,94,96,99,98,96};
 //        countSort(array);
+        //编码
+        String encode = Base64.getEncoder().encodeToString("chen".getBytes());
+        System.out.println("编码encode:"+encode);
+        //解码
+        byte[] decode = Base64.getDecoder().decode(encode);
+        System.out.println(new String(decode));
     }
 
 

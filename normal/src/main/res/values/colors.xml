@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorLevelGood">#08ca08</color>
+    <color name="colorLevelMedium">#F4BF1B</color>
+    <color name="colorLevelBad">#FF4500</color>
+
+    <color name="colorZhiLeng">#08cac3</color>
+    <color name="colorZhiRe">#e57625</color>
+    <color name="colorTongFeng">#08ca08</color>
+    <color name="colorChuShi">#b939d5</color>
+    <color name="colorWhite">#ffffff</color>
+</resources>

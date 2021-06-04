@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.landleaf.normal.widght.HorizontalListView
+        android:id="@+id/room_list_view"
+        tools:ignore="PxUsage"
+        android:layout_width="match_parent"
+        app:dividerWidth="20dp"
+        android:layout_height="125px"
+        android:layout_gravity="center" />
+
+</RelativeLayout>

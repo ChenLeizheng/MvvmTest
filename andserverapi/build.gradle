@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        consumerProguardFiles 'proguard-rules.txt'
+    }
+}
+
+dependencies {
+    api 'com.yanzhenjie.andserver:annotation:2.0.4'
+
+    api "com.yanzhenjie.apache:httpcore:4.4.10"
+    api "com.yanzhenjie.apache:fileupload:1.4"
+    api 'androidx.annotation:annotation:1.1.0'
+}
